@@ -8,6 +8,13 @@ docker push itelnets/webserver:letest
 imageName=itelnets/webserver:letest
 containerName=itelnets
 
+echo stop  old container...
+docker stop  $containerName
+
+echo remove old images 
+docker rmi -f $(docker images --filter=reference="itelnets/webserver:letest" -q)
+
+
 echo Delete old container...
 docker rm -f $containerName
 
