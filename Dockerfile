@@ -10,7 +10,7 @@ RUN apt-get update \
 RUN apt-get update && apt-get install -y git
 RUN mkdir Kautik 
 RUN mkdir /Kautik/html && cd /Kautik/html/ && git clone https://github.com/kautikkumar/itelnets.git 
-RUN cd /Kautik/html/itelnets && git pull && cp  * /var/www/html/
+RUN cd /Kautik/html/itelnets && git pull && cp -r * /var/www/html/
 #RUN mkdir /Kautik/script && cd /Kautik/script/ && git clone -b script https://github.com/kautikkumar/itelnets.git
 #RUN cd /Kautik/script/itelnets && git pull
 #COPY index.html /var/www/html/index.nginx-debian.html
