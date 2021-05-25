@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "itelnets");
+$conn = mysqli_connect("localhost", "itelnets", "itelnets@001", "itelnets");
           
 // Check connection
 if($conn === false){
